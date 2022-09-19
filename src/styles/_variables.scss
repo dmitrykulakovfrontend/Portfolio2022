@@ -1,0 +1,34 @@
+// Screen sizes
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-xxl: 1300px;
+$screen-full: 1400px;
+
+// Colors
+$whiteColor: hsl(0deg, 0%, 100%);
+$secondaryWhiteColor: hsl(218deg, 67%, 98%);
+
+$grayColor: hsl(235deg, 7%, 68%);
+$secondaryGrayColor: hsl(233deg, 7%, 47%);
+
+$blackColor: hsl(214deg, 67%, 5%);
+$secondaryBlackColor: hsl(229deg, 20%, 16%);
+
+$blueColor: hsl(199deg, 83%, 47%);
+$secondaryBlueColor: hsl(214deg, 64%, 94%);
+
+$titleColor: hsl(215deg, 65%, 26%);
+
+$textColor: hsl(210deg, 3%, 16%);
+
+// font-sizes
+
+$h1: 4rem;
+$h2: 2rem;
+$h3: 1.625rem; // 26px
+$h4: 1.125rem; // 18px
+$standard: 1rem;
+$small: .9375rem; // 15px
+$extra-small: .8125rem; // 13px
