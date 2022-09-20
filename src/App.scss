@@ -1,1 +1,6 @@
-@use 'src/styles/variables' as *;
+@use "src/styles/variables.module" as *;
+
+.app {
+  display: flex;
+  height: 100%;
+}

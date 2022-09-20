@@ -1,5 +1,10 @@
 @use "src/styles/variables.module" as *;
 @use "src/styles/animations" as *;
+
+.page-menu {
+  width: 0;
+  height: 100%;
+  background-color: $blackColor;
   &.active {
     animation: slide-in 0.5s forwards;
   }
