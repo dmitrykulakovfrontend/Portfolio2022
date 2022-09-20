@@ -1,44 +1,44 @@
-@use 'src/styles/variables' as *;
+@use "src/styles/variables.module" as *;
 
 // Breakpoints
 @mixin smMinBreakPoint {
-    @media (max-width: #{$screen-sm}) {
-        @content;
-    }
+  @media (max-width: #{$screen-sm}) {
+    @content;
+  }
 }
 
 @mixin mdMinBreakPoint {
-    @media (max-width: #{$screen-md}) {
-        @content;
-    }
+  @media (max-width: #{$screen-md}) {
+    @content;
+  }
 }
 
 @mixin lgMinBreakPoint {
-    @media (max-width: #{$screen-lg}) {
-        @content;
-    }
+  @media (max-width: #{$screen-lg}) {
+    @content;
+  }
 }
 
 @mixin xlMinBreakPoint {
-    @media (max-width: #{$screen-xl}) {
-        @content;
-    }
+  @media (max-width: #{$screen-xl}) {
+    @content;
+  }
 }
 
 @mixin xxlMinBreakPoint {
-    @media (max-width: #{$screen-xxl}) {
-        @content;
-    }
+  @media (max-width: #{$screen-xxl}) {
+    @content;
+  }
 }
 
 @mixin customMinBreakPoint($size) {
-    @media (max-width: $size+'px') {
-        @content;
-    }
- }
+  @media (max-width: $size+"px") {
+    @content;
+  }
+}
 
 @mixin customMaxBreakPoint($size) {
-    @media (max-width: $size+'px') {
-        @content;
-    }
- }
+  @media (max-width: $size+"px") {
+    @content;
+  }
+}

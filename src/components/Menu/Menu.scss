@@ -1,3 +1,5 @@
+@use "src/styles/variables.module" as *;
+@use "src/styles/animations" as *;
   &.active {
     animation: slide-in 0.5s forwards;
   }
