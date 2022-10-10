@@ -1,0 +1,23 @@
+@use "src/styles/variables.module" as *;
+
+.text {
+  text-align: center;
+  margin-top: 10px;
+  font-size: $big;
+  line-height: 1.5rem;
+  &__cursor {
+    border-left: 0.1em solid $blue;
+    animation: blink 0.7s steps(1) infinite;
+  }
+  &__current-text {
+    color: $blue;
+    letter-spacing: 1px;
+  }
+  margin: 0 auto;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
