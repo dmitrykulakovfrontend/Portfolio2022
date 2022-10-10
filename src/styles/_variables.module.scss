@@ -7,17 +7,17 @@ $screen-xxl: 1300px;
 $screen-full: 1400px;
 
 // Colors
-$whiteColor: hsl(0deg, 0%, 100%);
-$secondaryWhiteColor: hsl(218deg, 67%, 98%);
+$white: hsl(0deg, 0%, 100%);
+$secondaryWhite: hsl(220deg 13% 95%);
 
-$grayColor: hsl(235deg, 7%, 68%);
-$secondaryGrayColor: hsl(233deg, 7%, 47%);
+$gray: hsl(235deg, 7%, 68%);
+$secondaryGray: hsl(233deg, 7%, 47%);
 
-$blackColor: hsl(214deg, 67%, 5%);
-$secondaryBlackColor: hsl(229deg, 20%, 16%);
+$black: hsl(210deg 14% 31%);
+$secondaryBlack: hsl(229deg, 20%, 16%);
 
-$blueColor: hsl(199deg, 83%, 47%);
-$secondaryBlueColor: hsl(214deg, 64%, 94%);
+$blue: hsl(209deg 95% 38%);
+$secondaryBlue: hsl(208deg 100% 97%);
 
 $titleColor: hsl(215deg, 65%, 26%);
 
@@ -25,9 +25,8 @@ $textColor: hsl(210deg, 3%, 16%);
 
 // font-sizes
 
-$h1: 4rem;
-$h2: 2rem;
 $h3: 1.625rem; // 26px
+$big: 1.25rem; // 20px
 $h4: 1.125rem; // 18px
 $standard: 1rem;
 $small: 0.9375rem; // 15px
