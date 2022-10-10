@@ -1,0 +1,21 @@
+@use "src/styles/variables.module" as *;
+
+.hero {
+  background-image: url("../../../../static/hero-img.png");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 100vh;
+  background-color: $secondaryWhite;
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &__title {
+    color: $black;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
