@@ -1,10 +1,12 @@
 import React from "react";
 import "./Landing.scss";
 
+import Hero from "./components/Hero";
+
 const Landing = () => {
   return (
     <div className="landing-page">
-      <h1>Landing</h1>
+      <Hero />
     </div>
   );
 };
