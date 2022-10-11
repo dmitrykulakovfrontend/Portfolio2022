@@ -1,10 +1,12 @@
 @use "src/styles/variables.module" as *;
+@use "src/styles/animations" as *;
 
 .hero {
   background-image: url("../../../../static/hero-img.png");
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: top center;
+  background-position-y: 10px;
   height: 100vh;
   background-color: $secondaryWhite;
   max-width: 1920px;
@@ -17,5 +19,8 @@
     color: $black;
     margin: 0 auto;
     text-align: center;
+  }
+  &__animation-wrapper {
+    animation: heroAppearing 1s forwards ease-in-out;
   }
 }
