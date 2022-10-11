@@ -8,7 +8,6 @@ const Menu = () => {
 
   const handleClick = () => {
     setIsActive(!isActive);
-    console.log(!isActive);
   };
   return (
     <>
