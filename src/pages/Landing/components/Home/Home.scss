@@ -1,8 +1,8 @@
 @use "src/styles/variables.module" as *;
 @use "src/styles/animations" as *;
 
-.hero {
-  background-image: url("../../../../static/hero-img.png");
+.home {
+  background-image: url("../../../../static/home-img.png");
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: top center;
@@ -21,6 +21,6 @@
     text-align: center;
   }
   &__animation-wrapper {
-    animation: heroAppearing 1s forwards ease-in-out;
+    animation: homeAppearing 1s forwards ease-in-out;
   }
 }

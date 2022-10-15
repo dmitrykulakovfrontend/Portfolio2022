@@ -1,14 +1,14 @@
 import React from "react";
-import "./Hero.scss";
+import "./Home.scss";
 
 import TypeWriter from "components/TypeWriter";
 import Socials from "components/Socials";
 
-const Hero = () => {
+const Home = () => {
   return (
-    <section className="hero">
-      <div className="hero__animation-wrapper">
-        <h1 className="hero__title">Dmitry Kulakov</h1>
+    <section className="home" id="home">
+      <div className="home__animation-wrapper">
+        <h1 className="home__title">Dmitry Kulakov</h1>
         <TypeWriter
           heading="I'm"
           messages={[
@@ -24,4 +24,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Home;
