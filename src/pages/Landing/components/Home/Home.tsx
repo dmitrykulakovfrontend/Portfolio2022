@@ -4,9 +4,16 @@ import "./Home.scss";
 import TypeWriter from "components/TypeWriter";
 import Socials from "components/Socials";
 
+import mountains from "static/mountains.jpg";
+
 const Home = () => {
   return (
     <section className="home" id="home">
+      <img
+        src={mountains}
+        className="home__background"
+        alt="mountains background"
+      />
       <div className="home__animation-wrapper">
         <h1 className="home__title">Dmitry Kulakov</h1>
         <TypeWriter
