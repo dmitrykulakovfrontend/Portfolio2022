@@ -4,6 +4,5 @@ import App from "./App";
 
 test("renders App with Dmitry Kulakov text", () => {
   render(<App />);
-  const linkElement = screen.getByText(/Dmitry Kulakov/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByText(/Dmitry Kulakov/i)).toBeInTheDocument();
 });

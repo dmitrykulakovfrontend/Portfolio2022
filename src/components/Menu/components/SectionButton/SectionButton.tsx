@@ -1,13 +1,21 @@
 import useWindowSize from "hooks/useWindowSize";
 import React from "react";
 import "../../Menu.scss";
-import variables from "utils/variables";
 
 type SectionButtonProps = {
   title: string;
   activeSection: string;
   icon?: string;
 };
+
+enum Variables {
+  "screenSm" = "576px",
+  "screenMd" = "768px",
+  "screenLg" = "992px",
+  "screenXl" = "1200px",
+  "screenXxl" = "1300px",
+  "screenFull" = "1400px",
+}
 
 const SectionButton = ({ title, activeSection, icon }: SectionButtonProps) => {
   const { width } = useWindowSize();
@@ -19,7 +27,7 @@ const SectionButton = ({ title, activeSection, icon }: SectionButtonProps) => {
       }
     >
       <i className={`menu__icon uil uil-${icon}`}></i>
-      {(width && width <= variables.screenLg) || activeSection === title
+      {(width && width <= +Variables.screenLg) || activeSection === title
         ? `${title[0].toUpperCase()}${title.slice(1)}`
         : ""}
     </a>
