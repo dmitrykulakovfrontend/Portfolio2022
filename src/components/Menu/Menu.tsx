@@ -3,13 +3,14 @@ import "./Menu.scss";
 
 import { Outlet } from "react-router-dom";
 import useScrollspy from "hooks/useScrollspy";
+import SectionButton from "./components/SectionButton";
 
 const Menu = () => {
-  const [isActive, setIsActive] = useState(false);
+  const [isActiveMenu, setIsActiveMenu] = useState(false);
   const activeSection = useScrollspy(["home", "about"]);
 
   const handleClick = () => {
-    setIsActive(!isActive);
+    setIsActiveMenu(!isActiveMenu);
   };
   return (
     <>
@@ -17,92 +18,56 @@ const Menu = () => {
       <button className="menu-button" onClick={handleClick}>
         <i
           className={
-            isActive
+            isActiveMenu
               ? "uil uil-times menu-button__icon menu-button__icon_active"
               : "uil uil-bars menu-button__icon"
           }
         ></i>
       </button>
-      <header className={isActive ? "menu menu_active" : "menu"}>
+      <header className={isActiveMenu ? "menu menu_active" : "menu"}>
         <nav className="menu__nav">
           <ul className="menu__list">
             <li className="menu__list-item">
-              <a
-                href="#home"
-                className={
-                  activeSection === "home"
-                    ? "menu__link menu__link_active"
-                    : "menu__link"
-                }
-              >
-                <i className="menu__icon uil uil-home"></i>
-                Home
-              </a>
+              <SectionButton
+                title="home"
+                icon="home"
+                activeSection={activeSection}
+              />
             </li>
             <li className="menu__list-item">
-              <a
-                href="#about"
-                className={
-                  activeSection === "about"
-                    ? "menu__link menu__link_active"
-                    : "menu__link"
-                }
-              >
-                <i className="menu__icon uil uil-user"></i>
-                About
-              </a>
+              <SectionButton
+                title="about"
+                icon="user"
+                activeSection={activeSection}
+              />
             </li>
             <li className="menu__list-item">
-              <a
-                href="#resume"
-                className={
-                  activeSection === "resume"
-                    ? "menu__link menu__link_active"
-                    : "menu__link"
-                }
-              >
-                <i className="menu__icon uil uil-file"></i>
-                Resume
-              </a>
+              <SectionButton
+                title="resume"
+                icon="file"
+                activeSection={activeSection}
+              />
             </li>
             <li className="menu__list-item">
-              <a
-                href="#portfolio"
-                className={
-                  activeSection === "portfolio"
-                    ? "menu__link menu__link_active"
-                    : "menu__link"
-                }
-              >
-                <i className="menu__icon uil uil-bag"></i>
-                Portfolio
-              </a>
+              <SectionButton
+                title="portfolio"
+                icon="bag"
+                activeSection={activeSection}
+              />
             </li>
             <li className="menu__list-item">
-              <a
-                href="#services"
-                className={
-                  activeSection === "services"
-                    ? "menu__link menu__link_active"
-                    : "menu__link"
-                }
-              >
-                <i className="menu__icon uil uil-server"></i>
-                Services
-              </a>
+              <SectionButton
+                title="services"
+                icon="server"
+                activeSection={activeSection}
+              />
             </li>
             <li className="menu__list-item">
-              <a
-                href="#contact"
-                className={
-                  activeSection === "contact"
-                    ? "menu__link menu__link_active"
-                    : "menu__link"
-                }
-              >
-                <i className="menu__icon uil uil-envelope"></i>
-                Contact
-              </a>
+              <SectionButton
+                title="contact"
+                icon="envelope"
+                activeSection={activeSection}
+              />
             </li>
           </ul>
         </nav>
