@@ -2,12 +2,12 @@
 @use "src/styles/mixins" as *;
 h1 {
   font-weight: bold;
-  font-size: 4rem;
-  line-height: 3.5rem;
+  font-size: 2rem;
+  line-height: 2.25rem;
   font-family: "Raleway", sans-serif;
   @include smMinBreakPoint {
-    font-size: 2rem;
-    line-height: 2.25rem;
+    font-size: 4rem;
+    line-height: 3.5rem;
   }
 }
 

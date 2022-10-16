@@ -32,10 +32,10 @@ $standard: 1rem;
 $small: 0.9375rem; // 15px
 $extra-small: 0.8125rem; // 13px
 :export {
-  screen-sm: $screen-sm;
-  screen-md: $screen-md;
-  screen-lg: $screen-lg;
-  screen-xl: $screen-xl;
-  screen-xxl: $screen-xxl;
-  screen-full: $screen-full;
+  screenSm: $screen-sm;
+  screenMd: $screen-md;
+  screenLg: $screen-lg;
+  screenXl: $screen-xl;
+  screenXxl: $screen-xxl;
+  screenFull: $screen-full;
 }

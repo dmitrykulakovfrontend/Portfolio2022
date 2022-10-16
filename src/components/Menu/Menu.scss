@@ -1,5 +1,6 @@
 @use "src/styles/variables.module" as *;
 @use "src/styles/animations" as *;
+@use "src/styles/mixins" as *;
 
 .menu-button {
   background-color: transparent;
@@ -19,6 +20,9 @@
       background-color: $blue;
       color: $white;
     }
+  }
+  @include lgMinBreakPoint {
+    display: none;
   }
 }
 
@@ -68,5 +72,24 @@
   &__icon {
     font-size: 20px;
     margin-left: 15px;
+  }
+  @include lgMinBreakPoint {
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    width: 50px;
+    margin-left: 10px;
+    &__link {
+      width: 60px;
+      justify-content: center;
+      &_active {
+        padding: 20px 20px;
+        width: max-content;
+      }
+    }
+    &__icon {
+      margin-left: 0;
+      transition: 0.3s;
+    }
   }
 }
