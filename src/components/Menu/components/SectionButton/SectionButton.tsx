@@ -9,12 +9,12 @@ type SectionButtonProps = {
 };
 
 enum Variables {
-  "screenSm" = "576px",
-  "screenMd" = "768px",
-  "screenLg" = "992px",
-  "screenXl" = "1200px",
-  "screenXxl" = "1300px",
-  "screenFull" = "1400px",
+  "screenSm" = 576,
+  "screenMd" = 768,
+  "screenLg" = 992,
+  "screenXl" = 1200,
+  "screenXxl" = 1300,
+  "screenFull" = 1400,
 }
 
 const SectionButton = ({ title, activeSection, icon }: SectionButtonProps) => {
@@ -27,7 +27,7 @@ const SectionButton = ({ title, activeSection, icon }: SectionButtonProps) => {
       }
     >
       <i className={`menu__icon uil uil-${icon}`}></i>
-      {(width && width <= +Variables.screenLg) || activeSection === title
+      {(width && width <= Variables.screenLg) || activeSection === title
         ? `${title[0].toUpperCase()}${title.slice(1)}`
         : ""}
     </a>

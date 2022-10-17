@@ -1,4 +1,5 @@
 @use "src/styles/variables.module" as *;
+@use "src/styles/mixins" as *;
 
 .socials-list {
   display: flex;
@@ -11,5 +12,8 @@
   }
   &__link {
     padding: 10px;
+  }
+  @include smMinBreakPoint {
+    justify-content: flex-start;
   }
 }

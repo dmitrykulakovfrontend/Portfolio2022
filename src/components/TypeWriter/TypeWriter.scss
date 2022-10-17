@@ -1,9 +1,10 @@
 @use "src/styles/variables.module" as *;
 @use "src/styles/animations" as *;
+@use "src/styles/mixins" as *;
 
 .text {
   text-align: center;
-  margin-top: 10px;
+  margin: 10px 5px;
   font-size: $big;
   line-height: 1.5rem;
   &__cursor {
@@ -14,5 +15,8 @@
     color: $blue;
     letter-spacing: 1px;
   }
-  margin: 10px auto 0 auto;
+  @include smMinBreakPoint {
+    font-size: $h3;
+    text-align: left;
+  }
 }
