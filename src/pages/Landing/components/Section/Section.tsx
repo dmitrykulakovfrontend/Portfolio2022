@@ -1,4 +1,4 @@
-import React, { ReactChildren, ReactNode } from "react";
+import React, { ReactNode } from "react";
 import "./Section.scss";
 
 type SectionProps = {
