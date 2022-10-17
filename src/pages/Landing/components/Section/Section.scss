@@ -1,0 +1,25 @@
+@use "src/styles/variables.module" as *;
+
+.page-section {
+  padding: 4rem 0;
+  max-width: 1320px;
+  margin: 0 auto;
+  &__title {
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+    border-bottom: 4px solid $black;
+    width: fit-content;
+    margin: 0 auto 1rem auto;
+    border-image: linear-gradient(
+      90deg,
+      $secondaryWhite 33%,
+      $blue 33%,
+      $blue 66%,
+      $secondaryWhite 66%
+    );
+    border-image-slice: 1;
+  }
+  &__info {
+    text-align: center;
+  }
+}

@@ -2,12 +2,14 @@ import React from "react";
 import "./Landing.scss";
 
 import Home from "./components/Home";
+import About from "./components/About";
 
 const Landing = () => {
   return (
-    <div className="landing-page">
+    <main className="landing-page">
       <Home />
-    </div>
+      <About />
+    </main>
   );
 };
 
