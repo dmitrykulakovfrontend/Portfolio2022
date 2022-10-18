@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React, { ReactNode } from "react";
 import "./Section.scss";
 
@@ -8,15 +9,21 @@ type SectionProps = {
 };
 
 const Section = ({ title, info, children }: SectionProps) => {
+  title = title.toLowerCase().replace(" ", "-");
   return (
-    <section
-      className="page-section"
-      id={title.toLowerCase().replace(" ", "-")}
+    <motion.div
+      transition={{ ease: "easeInOut", duration: 1 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      onViewportEnter={() => console.log("Enter")}
+      viewport={{ once: true, margin: "-100px 0px" }}
     >
-      <h2 className="page-section__title">{title}</h2>
-      <p className="page-section__info">{info}</p>
-      {children}
-    </section>
+      <section className="page-section" id={title}>
+        <h2 className="page-section__title">{title}</h2>
+        <p className="page-section__info">{info}</p>
+        {children}
+      </section>
+    </motion.div>
   );
 };
 

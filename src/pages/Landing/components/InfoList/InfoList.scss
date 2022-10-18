@@ -1,0 +1,33 @@
+@use "src/styles/variables.module" as *;
+@use "src/styles/mixins" as *;
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  &__item {
+    position: relative;
+    margin: 1rem 0;
+    padding-left: 20px;
+    font-family: $Open-Sans;
+
+    &::before {
+      content: ">";
+      position: absolute;
+      left: 0;
+      top: -5px;
+      font-size: 25px;
+      color: $blue;
+    }
+  }
+  &__key {
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+  @include mdMinBreakPoint {
+    flex-direction: row;
+    &__item {
+      width: calc(50% - 20px); // 20px from padding left
+    }
+  }
+}
