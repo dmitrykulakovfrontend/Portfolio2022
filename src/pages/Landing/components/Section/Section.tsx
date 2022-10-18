@@ -4,7 +4,7 @@ import "./Section.scss";
 type SectionProps = {
   title: string;
   info?: string;
-  children: ReactNode;
+  children?: ReactNode;
 };
 
 const Section = ({ title, info, children }: SectionProps) => {
