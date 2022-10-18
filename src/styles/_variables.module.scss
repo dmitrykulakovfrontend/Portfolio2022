@@ -11,7 +11,7 @@ $white: hsl(0deg, 0%, 100%);
 $secondaryWhite: hsl(220deg 13% 95%);
 
 $gray: hsl(235deg, 7%, 68%);
-$secondaryGray: hsl(233deg, 7%, 47%);
+$secondaryGray: hsl(210deg 14% 51%);
 
 $black: hsl(210deg 14% 31%);
 $secondaryBlack: hsl(229deg, 20%, 16%);
@@ -31,6 +31,10 @@ $h4: 1.125rem; // 18px
 $standard: 1rem;
 $small: 0.9375rem; // 15px
 $extra-small: 0.8125rem; // 13px
+
+$Raleway: "Raleway", sans-serif;
+$Open-Sans: "Open Sans", sans-serif;
+
 :export {
   screenSm: $screen-sm;
   screenMd: $screen-md;
