@@ -3,9 +3,10 @@
 
 .about {
   &__profile {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 1rem;
+    width: 50%;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 50%;
   }
   &__title {
     color: $secondaryGray;
@@ -20,9 +21,11 @@
   }
   @include mdMinBreakPoint {
     display: flex;
+    align-items: center;
     gap: 10px;
     &__profile {
       width: 33.3%;
+      margin: 0 1rem 0 0;
     }
   }
 }
