@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@use "src/styles/variables.module" as *;
 
 html,
 body,
@@ -105,9 +106,21 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
 }
+body::-webkit-scrollbar-track {
+  background: $secondaryWhite;
+}
+body::-webkit-scrollbar-thumb {
+  background: $blue;
+}
+body::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
 ol,
 ul {
   list-style: none;
