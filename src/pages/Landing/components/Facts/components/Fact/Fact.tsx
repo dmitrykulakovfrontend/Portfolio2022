@@ -6,10 +6,12 @@ import { useAnimatedCounter } from "hooks/useAnimatedCounter";
 
 type FactProps = {
   fact: FactType;
+  activeSection: string;
 };
 
-const Fact = ({ fact }: FactProps) => {
-  const animatedValue = useAnimatedCounter(fact.value, 0, 2);
+const Fact = ({ fact, activeSection }: FactProps) => {
+  const isActive = activeSection === "facts";
+  const animatedValue = useAnimatedCounter(isActive, fact.value, 0, 2);
   return (
     <div className="fact">
       <i className={`fact__icon uil uil-${fact.icon}`}></i>

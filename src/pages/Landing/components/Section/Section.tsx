@@ -15,8 +15,6 @@ const Section = ({ title, info, children }: SectionProps) => {
       transition={{ ease: "easeInOut", duration: 1 }}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      // eslint-disable-next-line no-console
-      onViewportEnter={() => console.log("Enter")}
       viewport={{ once: true, margin: "-100px 0px" }}
     >
       <section className="page-section" id={title}>

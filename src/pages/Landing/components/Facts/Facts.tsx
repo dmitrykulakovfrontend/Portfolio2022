@@ -27,12 +27,16 @@ const facts: FactType[] = [
   },
 ];
 
-const Facts = () => {
+type FactsProps = {
+  activeSection: string;
+};
+
+const Facts = ({ activeSection }: FactsProps) => {
   return (
     <Section title="Facts" info="Here some facts that I achieved and proud of">
       <ul className="facts-list">
         {facts.map((fact, i) => (
-          <Fact key={i} fact={fact} />
+          <Fact key={i} fact={fact} activeSection={activeSection} />
         ))}
       </ul>
     </Section>

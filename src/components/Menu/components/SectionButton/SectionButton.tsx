@@ -19,6 +19,7 @@ enum Variables {
 
 const SectionButton = ({ title, activeSection, icon }: SectionButtonProps) => {
   const { width } = useWindowSize();
+  console.log(activeSection);
   return (
     <a
       href={`#${title}`}

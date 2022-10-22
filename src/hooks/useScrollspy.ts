@@ -1,5 +1,5 @@
+import useWindowSize from 'hooks/useWindowSize';
 import { useLayoutEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 
 // source: https://dev.to/rgolawski/highlight-active-menu-item-with-scrollspy-hook-1gpp
 
@@ -12,12 +12,17 @@ const isBetween = (value: number, floor: number, ceil: number) => {
 }
   
 
-const useScrollspy = (ids: string[], offset = 5) => {
+const useScrollspy = (ids: string[], offset: number | string = 0) => {
   const [activeId, setActiveId] = useState(""); 
-  const location = useLocation();
+  const {height} = useWindowSize();
+
+  if (typeof offset === 'string') {
+    offset = height! * (parseFloat(offset) / 100);
+  }
 
   useLayoutEffect(() => {
     const handleScroll = () => {
+      console.log('render');
 
       const scroll = window.pageYOffset;
       
@@ -29,8 +34,8 @@ const useScrollspy = (ids: string[], offset = 5) => {
           if (!element) return { id, top: -1, bottom: -1 };
 
           const rect = element.getBoundingClientRect();
-          const top = clamp(rect.top + scroll - offset);
-          const bottom = clamp(rect.bottom + scroll - offset);
+          const top = clamp(rect.top + scroll - +offset);
+          const bottom = clamp(rect.bottom + scroll - +offset);
 
           return { id, top, bottom };
         })
@@ -48,7 +53,8 @@ const useScrollspy = (ids: string[], offset = 5) => {
       window.removeEventListener("resize", handleScroll);
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [ids, offset, location]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ids, offset, window.location]);
   return activeId;
 };
 

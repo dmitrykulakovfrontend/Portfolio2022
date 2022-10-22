@@ -5,12 +5,16 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Facts from "./components/Facts";
 
-const Landing = () => {
+type LandingProps = {
+  activeSection: string;
+};
+
+const Landing = ({ activeSection }: LandingProps) => {
   return (
     <main className="landing-page">
       <Home />
       <About />
-      <Facts />
+      <Facts activeSection={activeSection} />
     </main>
   );
 };

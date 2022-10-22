@@ -5,9 +5,12 @@ import { Outlet } from "react-router-dom";
 import useScrollspy from "hooks/useScrollspy";
 import SectionButton from "./components/SectionButton";
 
-const Menu = () => {
+type MenuProps = {
+  activeSection: string;
+};
+
+const Menu = ({ activeSection }: MenuProps) => {
   const [isActiveMenu, setIsActiveMenu] = useState(false);
-  const activeSection = useScrollspy(["home", "about"]);
 
   const handleClick = () => {
     setIsActiveMenu(!isActiveMenu);
@@ -43,7 +46,7 @@ const Menu = () => {
             </li>
             <li className="menu__list-item">
               <SectionButton
-                title="resume"
+                title="facts"
                 icon="file"
                 activeSection={activeSection}
               />
