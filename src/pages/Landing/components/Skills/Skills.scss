@@ -1,0 +1,19 @@
+@use "src/styles/variables.module" as *;
+
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  background-color: $secondaryBlack;
+}
+
+.skills__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  min-width: 270px;
+  width: 100%;
+  min-height: 100%;
+}

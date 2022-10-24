@@ -6,7 +6,10 @@ import "./App.scss";
 import useScrollspy from "hooks/useScrollspy";
 
 function App() {
-  const activeSection = useScrollspy(["home", "about", "facts"], "70%");
+  const activeSection = useScrollspy(
+    ["home", "about", "facts", "skills"],
+    "70%"
+  );
   return (
     <BrowserRouter>
       <Routes>

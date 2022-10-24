@@ -1,5 +1,6 @@
 @use "src/styles/variables.module" as *;
 @use "src/styles/mixins" as *;
+@use "src/styles/animations" as *;
 
 .page-section {
   padding: 4rem 0.5rem;
@@ -30,5 +31,42 @@
   }
   @include mdMinBreakPoint {
     padding: 4rem 8rem;
+  }
+
+  &_dark {
+    margin: 0;
+    padding-top: 5rem;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: $secondaryBlack;
+    color: $white;
+    position: relative;
+    > * {
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -45px;
+      left: -50px;
+      width: 130%;
+      height: 90px;
+      background-color: $white;
+      filter: blur(12px);
+      animation: move-transition-in 5s;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -40px;
+      left: -45px;
+      width: 130%;
+      height: 90px;
+      background-color: $white;
+      filter: blur(12px);
+      animation: move-transition-out 5s;
+    }
   }
 }

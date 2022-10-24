@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { animate, AnimationPlaybackControls } from 'framer-motion';
+import { animate } from 'framer-motion';
 
 export const useAnimatedCounter = (
   isActive: boolean,
@@ -11,16 +11,14 @@ export const useAnimatedCounter = (
   const [isDone, toggleIsDone] = useState(false)
   
   useEffect(() => {
-    let controls: AnimationPlaybackControls;
     if (isActive && !isDone) {
-      controls = animate(initialValue, maxValue, {
+      animate(initialValue, maxValue, {
         duration,
         onUpdate(value) {
           setCounter(parseInt(`${value}`));
         },
       });
       return () => {
-        controls.stop()
         toggleIsDone(true);
       };
     }
