@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Menu.scss";
 
 import { Outlet } from "react-router-dom";
-import useScrollspy from "hooks/useScrollspy";
 import SectionButton from "./components/SectionButton";
 
 type MenuProps = {
@@ -53,7 +52,7 @@ const Menu = ({ activeSection }: MenuProps) => {
             </li>
             <li className="menu__list-item">
               <SectionButton
-                title="portfolio"
+                title="skills"
                 icon="bag"
                 activeSection={activeSection}
               />

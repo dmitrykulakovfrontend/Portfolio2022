@@ -22,7 +22,6 @@ const useScrollspy = (ids: string[], offset: number | string = 0) => {
 
   useLayoutEffect(() => {
     const handleScroll = () => {
-      console.log('render');
 
       const scroll = window.pageYOffset;
       
