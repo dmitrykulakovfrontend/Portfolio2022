@@ -10,20 +10,21 @@ const ColorsList = {
   blue: "blue",
   green: "green",
   skyblue: "skyblue",
+  darkgreen: "darkgreen",
 } as const;
 
 export type Colors = typeof ColorsList[keyof typeof ColorsList] | string;
 
 type SkillProps = {
   name: string;
-  percent: number;
+  percent?: number;
   isInView: boolean;
   color?: Colors;
 };
 
 const Skill = ({
   name,
-  percent,
+  percent = 100,
   isInView,
   color = ColorsList.red,
 }: SkillProps) => {
@@ -41,7 +42,7 @@ const Skill = ({
           cx="80"
           cy="80"
           r="70"
-          className={`progressbar__svg-circle shadow-${color}`}
+          className={`progressbar__svg-circle stroke-${color} shadow-${color}`}
         ></motion.circle>
       </svg>
       <span className={`progressbar__text shadow-${color}`}>{name}</span>

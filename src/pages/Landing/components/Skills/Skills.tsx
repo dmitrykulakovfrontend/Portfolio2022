@@ -11,32 +11,26 @@ type SkillsProps = {
 const skills = [
   {
     name: "HTML",
-    percent: 95,
-    color: "sky",
+    color: "red",
   },
   {
     name: "JavaScript",
-    percent: 90,
     color: "yellow",
   },
   {
     name: "CSS",
-    percent: 85,
-    color: "skyblue",
-  },
-  {
-    name: "React",
-    percent: 75,
     color: "blue",
   },
   {
+    name: "React",
+    color: "skyblue",
+  },
+  {
     name: "TypeScript",
-    percent: 65,
     color: "sky",
   },
   {
     name: "NodeJS",
-    percent: 60,
     color: "green",
   },
 ];
@@ -56,14 +50,8 @@ const Skills = ({ activeSection }: SkillsProps) => {
         className="skills"
       >
         <div className="skills__list">
-          {skills.map(({ name, color, percent }, i) => (
-            <Skill
-              isInView={isInView}
-              name={name}
-              color={color}
-              percent={percent}
-              key={i}
-            />
+          {skills.map(({ name, color }, i) => (
+            <Skill isInView={isInView} name={name} color={color} key={i} />
           ))}
         </div>
       </motion.div>

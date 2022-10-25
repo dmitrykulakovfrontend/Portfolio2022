@@ -3,18 +3,22 @@
 @use "sass:meta";
 
 $colors: (
-  "red": hsl(15, 100%, 60%),
-  "sky": hsl(200, 100%, 60%),
+  "red": hsl(13, 77%, 52%),
+  "sky": hsl(211, 60%, 48%),
   "purple": hsl(300, 100%, 60%),
-  "yellow": hsl(60, 100%, 60%),
+  "yellow": hsl(53, 93%, 54%),
   "blue": hsl(220, 100%, 60%),
-  "green": hsl(110, 100%, 60%),
-  "skyblue": hsl(180, 100%, 60%),
+  "green": hsl(103, 50%, 53%),
+  "skyblue": hsl(189, 100%, 50%),
+  "darkgreen": hsl(99, 47%, 40%),
 );
 
 @each $name, $color in $colors {
   .shadow-#{$name} {
     filter: drop-shadow(0 0 1px $color);
+  }
+  .stroke-#{$name} {
+    stroke: $color;
   }
 }
 
@@ -45,9 +49,8 @@ $color-vue: hsl(145, 100%, 60%);
   width: 100%;
   height: 100%;
   fill: none;
-  stroke-width: 10;
+  stroke-width: 5;
   stroke-dasharray: 440;
-  stroke: hsl(0, 0%, 100%);
   stroke-linecap: round;
   transform: translate(5px, 5px); // stroke-width / 2
 }
