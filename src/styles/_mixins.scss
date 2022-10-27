@@ -2,31 +2,31 @@
 
 // Breakpoints
 @mixin smMinBreakPoint {
-  @media (min-width: #{$screen-sm}) {
+  @media (min-width: #{calc($screen-sm / 16px) * 1rem}) {
     @content;
   }
 }
 
 @mixin mdMinBreakPoint {
-  @media (min-width: #{$screen-md}) {
+  @media (min-width: #{calc($screen-md / 16px) * 1rem}) {
     @content;
   }
 }
 
 @mixin lgMinBreakPoint {
-  @media (min-width: #{$screen-lg}) {
+  @media (min-width: #{calc($screen-lg / 16px) * 1rem}) {
     @content;
   }
 }
 
 @mixin xlMinBreakPoint {
-  @media (min-width: #{$screen-xl}) {
+  @media (min-width: #{calc($screen-xl / 16px) * 1rem}) {
     @content;
   }
 }
 
 @mixin xxlMinBreakPoint {
-  @media (min-width: #{$screen-xxl}) {
+  @media (min-width: #{calc($screen-xxl / 16px) * 1rem}) {
     @content;
   }
 }

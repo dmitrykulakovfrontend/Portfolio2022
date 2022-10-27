@@ -59,7 +59,7 @@ const Menu = ({ activeSection }: MenuProps) => {
             </li>
             <li className="menu__list-item">
               <SectionButton
-                title="services"
+                title="projects"
                 icon="server"
                 activeSection={activeSection}
               />

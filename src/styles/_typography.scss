@@ -12,7 +12,6 @@ h1 {
 }
 
 h2 {
-  font-weight: bold;
   font-size: $h2;
   font-family: $Raleway;
 }
@@ -26,6 +25,7 @@ h3 {
 h4 {
   font-size: $h4;
   font-family: $Raleway;
+  font-weight: bold;
 }
 
 p {

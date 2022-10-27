@@ -1,0 +1,130 @@
+@use "src/styles/mixins" as *;
+@use "src/styles/variables.module" as *;
+.project {
+  flex: 1 0 300px;
+  position: relative;
+  overflow: hidden;
+  &:hover &__info,
+  &:hover &__time {
+    opacity: 1;
+  }
+  &:hover &__hover {
+    opacity: 0.7;
+    scale: 1;
+  }
+  &__image {
+    width: 100%;
+    scale: 1.02;
+  }
+  &__info {
+    color: $secondaryBlack;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    & > * {
+      margin-bottom: 1rem;
+    }
+    @include smMinBreakPoint {
+      position: absolute;
+      color: $white;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      width: 80%;
+      opacity: 0;
+    }
+    &_dark {
+      color: $secondaryBlack;
+    }
+  }
+  &__time {
+    position: absolute;
+    color: $white;
+    text-align: center;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin: 45px;
+    transition: all 0.3s ease-in-out;
+    @include smMinBreakPoint {
+      opacity: 0;
+    }
+    &_dark {
+      color: $secondaryBlack;
+    }
+  }
+  &__name {
+    font-family: $Raleway;
+    font-size: $big;
+  }
+  &__description,
+  &__stack,
+  &__bullets-list {
+    font-size: $small;
+    font-family: $Open-Sans;
+  }
+  &__bullets-list {
+    list-style: disc;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 25px;
+  }
+  &__bullet {
+    text-align: left;
+  }
+  &__hover {
+    scale: 0.9;
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    background-color: $secondaryBlack;
+    &_dark {
+      background-color: $white;
+    }
+    @include smMinBreakPoint {
+      display: block;
+    }
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      width: 48px;
+      height: 48px;
+    }
+    &::after {
+      top: 10px;
+      left: 10px;
+      border-top: 3px solid lighten($blue, 25%);
+      border-left: 3px solid lighten($blue, 25%);
+    }
+    &::before {
+      right: 10px;
+      bottom: 10px;
+      border-bottom: 3px solid lighten($blue, 25%);
+      border-right: 3px solid lighten($blue, 25%);
+    }
+  }
+  &__buttons {
+    display: flex;
+    margin: 1rem 0 0 0;
+    gap: 10px;
+    justify-content: center;
+  }
+  &__link {
+    color: $white;
+    text-decoration: none;
+    width: 100%;
+    max-width: 150px;
+  }
+  @include smMinBreakPoint {
+    flex-basis: 600px;
+    border: 3px solid $secondaryBlack;
+  }
+}

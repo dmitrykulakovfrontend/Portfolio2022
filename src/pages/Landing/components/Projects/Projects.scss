@@ -1,0 +1,8 @@
+@use "src/styles/variables.module" as *;
+.projects {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}

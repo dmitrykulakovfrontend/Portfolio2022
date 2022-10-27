@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Facts from "./components/Facts";
 import Skills from "./components/Skills";
+import Projects from "./components/Projects";
 
 type LandingProps = {
   activeSection: string;
@@ -17,7 +18,7 @@ const Landing = ({ activeSection }: LandingProps) => {
       <About />
       <Facts activeSection={activeSection} />
       <Skills activeSection={activeSection} />
-      <About />
+      <Projects />
     </main>
   );
 };
