@@ -15,6 +15,10 @@
   &__image {
     width: 100%;
     scale: 1.02;
+    margin-bottom: 1rem;
+    @include smMinBreakPoint {
+      margin-bottom: 0;
+    }
   }
   &__info {
     color: $secondaryBlack;
@@ -45,10 +49,11 @@
     top: 0;
     left: 0;
     z-index: 1;
-    margin: 45px;
+    margin: 5px;
     transition: all 0.3s ease-in-out;
     @include smMinBreakPoint {
       opacity: 0;
+      margin: 25px;
     }
     &_dark {
       color: $secondaryBlack;
@@ -124,7 +129,7 @@
     max-width: 150px;
   }
   @include smMinBreakPoint {
-    flex-basis: 600px;
+    flex-basis: 560px;
     border: 3px solid $secondaryBlack;
   }
 }
