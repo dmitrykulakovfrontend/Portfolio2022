@@ -1,4 +1,4 @@
-lockfileVersion: 5.5
+lockfileVersion: 5.4
 
 specifiers:
   '@babel/runtime': ^7.20.0
@@ -20,7 +20,6 @@ specifiers:
   eslint-plugin-prettier: ^4.2.1
   framer-motion: ^7.6.2
   fsevents: ^2.3.2
-  ga-4-react: ^0.1.281
   prettier: 2.7.1
   react: ^18.2.0
   react-dom: ^18.2.0
@@ -42,7 +41,6 @@ dependencies:
   '@types/react-router-dom': 5.3.3
   dotenv: 16.0.3
   framer-motion: 7.6.2_biqbaboplfbrettd7655fr4n2y
-  ga-4-react: 0.1.281
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-router-dom: 6.4.2_biqbaboplfbrettd7655fr4n2y
@@ -5217,11 +5215,6 @@ packages:
 
   /functions-have-names/1.2.3:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
-
-  /ga-4-react/0.1.281:
-    resolution: {integrity: sha512-LBvn8digT3gS8Iw8/XN3Z60c/JlFjMreLrZEneeQr+N/3+Ymv8yOsuK6qFAX2VPS6TscLbSlgtb/mriJ2P17Ow==}
-    engines: {node: '>=10'}
-    dev: false
 
   /gensync/1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
