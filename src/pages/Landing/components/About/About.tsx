@@ -2,7 +2,7 @@ import React from "react";
 import Section from "../Section";
 import "./About.scss";
 
-import profileImg from "static/profile-img.jpg";
+import test2 from "static/test2.webp";
 import InfoList from "./components/InfoList";
 
 const profile = {
@@ -18,7 +18,7 @@ const About = () => {
   return (
     <Section title="About" info="Here you can learn about me">
       <div className="about">
-        <img className="about__profile" src={profileImg} alt="profile" />
+        <img className="about__profile" src={test2} alt="profile" />
         <div className="about__text">
           <h3 className="about__title">Front End Developer.</h3>
           <p className="about__info">

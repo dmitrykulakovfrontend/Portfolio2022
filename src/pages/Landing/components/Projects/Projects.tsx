@@ -3,9 +3,9 @@ import Section from "../Section";
 import Project from "./components/Project";
 import "./Projects.scss";
 
-import paladinsDataSrc from "static/paladins-data.png";
-import booksHut from "static/books-hut.jpeg";
-import todoDaily from "static/todo-daily.png";
+import paladinsDataSrc from "static/paladins-data.webp";
+import booksHut from "static/books-hut.webp";
+import todoDaily from "static/todo-daily.webp";
 
 const projects = [
   {

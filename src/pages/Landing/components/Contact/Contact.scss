@@ -1,0 +1,96 @@
+@use "src/styles/variables.module" as *;
+@use "src/styles/mixins" as *;
+.screen-reader {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  &__button-wrapper {
+    width: 180px;
+    margin: 0 auto;
+  }
+  @include lgMinBreakPoint {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  &__input {
+    border: 1px solid $secondaryGray;
+    padding: 0.9rem;
+    border-radius: 4px;
+    font-family: $Open-Sans;
+    font-size: $small;
+    width: 100%;
+  }
+  &__textarea {
+    max-height: auto;
+    min-height: 120px;
+    resize: both;
+  }
+  &__collapse {
+    @include mdMinBreakPoint {
+      width: calc(50% - 20px - 1.8rem); // gap amount and padding
+    }
+  }
+  @include lgMinBreakPoint {
+    width: 60%;
+  }
+}
+
+.details {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  margin-bottom: 30px;
+  margin-right: 5px;
+  &__detail {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+  }
+  &__name {
+    font-size: $big;
+    font-weight: 600;
+  }
+  &__value {
+    font-size: $small;
+    font-family: $Open-Sans;
+    text-decoration: none;
+    color: $gray;
+  }
+  &__icon {
+    background-color: $secondaryBlue;
+    font-size: 20px;
+    padding: 0.7rem;
+    border-radius: 50%;
+    height: fit-content;
+    color: $blue;
+    transition: all 0.3s ease-in-out;
+  }
+  &__detail:hover &__icon {
+    color: $secondaryBlue;
+    background-color: $blue;
+  }
+}

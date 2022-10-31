@@ -7,7 +7,7 @@ import useScrollspy from "hooks/useScrollspy";
 
 function App() {
   const activeSection = useScrollspy(
-    ["home", "about", "facts", "skills", "projects"],
+    ["home", "about", "facts", "skills", "projects", "contact"],
     "70%"
   );
   return (

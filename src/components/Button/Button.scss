@@ -14,6 +14,7 @@
   text-decoration: none;
   font-size: $big;
   transition: 0.3s;
+  border: none;
   &_active {
     background-color: $blue;
     color: $white;

@@ -3,12 +3,13 @@
 @use "src/styles/animations" as *;
 
 .page-section {
-  padding: 4rem 0.5rem;
+  padding: 4rem 1rem;
   max-width: 1320px;
   margin: 0 auto;
   &__title {
     text-transform: uppercase;
     padding-bottom: 1rem;
+    font-weight: bold;
     border-bottom: 4px solid $black;
     width: fit-content;
     margin: 0 auto 1rem auto;

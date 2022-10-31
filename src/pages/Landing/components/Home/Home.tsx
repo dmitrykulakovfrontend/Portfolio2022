@@ -4,7 +4,7 @@ import "./Home.scss";
 import TypeWriter from "components/TypeWriter";
 import Socials from "components/Socials";
 
-import mountains from "static/mountains.jpg";
+import mountains from "static/mountains.webp";
 
 const Home = () => {
   return (
