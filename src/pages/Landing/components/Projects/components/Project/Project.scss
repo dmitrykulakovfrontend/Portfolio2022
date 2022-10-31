@@ -1,5 +1,5 @@
 @use "src/styles/mixins" as *;
-@use "src/styles/variables.module" as *;
+@use "src/styles/variables" as *;
 .project {
   flex: 1 0 300px;
   position: relative;

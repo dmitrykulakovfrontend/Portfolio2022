@@ -36,12 +36,3 @@ $extra-small: 0.8125rem; // 13px
 
 $Raleway: "Raleway", sans-serif;
 $Open-Sans: "Open Sans", sans-serif;
-
-:export {
-  screenSm: $screen-sm;
-  screenMd: $screen-md;
-  screenLg: $screen-lg;
-  screenXl: $screen-xl;
-  screenXxl: $screen-xxl;
-  screenFull: $screen-full;
-}
