@@ -6,7 +6,7 @@ import test2 from "static/test2.webp";
 import InfoList from "./components/InfoList";
 
 const profile = {
-  birthday: "22 December 2003",
+  hobbies: "Books, video-games",
   age: "18",
   city: "Moscow, Russia",
   email: "atomeistee@gmail.com",
