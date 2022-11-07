@@ -7,7 +7,7 @@ import InfoList from "./components/InfoList";
 
 const profile = {
   hobbies: "Books, video-games",
-  age: "18",
+  goal: "Become a Senior Developer",
   city: "Moscow, Russia",
   email: "atomeistee@gmail.com",
   experience: "1 year of Web Development",
