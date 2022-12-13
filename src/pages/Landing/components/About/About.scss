@@ -8,20 +8,37 @@
     margin: 1rem auto;
     border-radius: 50%;
   }
+  &__welcome {
+    font-size: $h3;
+    text-align: center;
+    margin: 1rem 0;
+  }
   &__title {
     color: $darkGray;
     margin-bottom: 1rem;
+    text-align: center;
   }
   &__info {
     font-style: italic;
     font-family: $Open-Sans;
   }
-  &__description {
+  &__bullet-list {
+    list-style: disc;
+    list-style-position: outside;
+    font-size: $h4;
+  }
+  &__bullet {
+    font-style: italic;
+    margin: 1rem 0;
     font-family: $Open-Sans;
   }
-  @include mdMinBreakPoint {
+  &__description {
+    font-family: $Open-Sans;
+    margin: 1rem 0;
+  }
+  @include lgMinBreakPoint {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
     &__profile {
       width: 33.3%;
