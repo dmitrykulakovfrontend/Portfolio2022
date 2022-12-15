@@ -54,7 +54,7 @@ const projects = [
     stack: "React, Node.js, MongoDB, Express, GraphQL",
     src: paladinsDataSrc,
     github: "https://github.com/dmitrykulakovfrontend/Paladins-Data",
-    website: "https://paladinsdata.herokuapp.com/",
+    website: "https://paladins-data.vercel.app/",
   },
 ];
 
