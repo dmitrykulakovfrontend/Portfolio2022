@@ -4,6 +4,7 @@ import App from "App";
 
 import "styles/_global.scss";
 import "styles/_typography.scss";
+import "./i18n";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

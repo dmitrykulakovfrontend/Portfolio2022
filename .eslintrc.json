@@ -28,8 +28,8 @@
     "ecmaVersion": 11,
     "ecmaFeatures": {
       "jsx": true
-    },
-    "project": "./tsconfig.json"
+    }
+    // "project": "./tsconfig.json"
   },
   "settings": {
     "react": {
