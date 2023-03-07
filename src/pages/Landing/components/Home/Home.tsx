@@ -6,7 +6,10 @@ import Socials from "components/Socials";
 
 import mountains from "static/mountains.webp";
 
+import { useTranslation, Trans } from "react-i18next";
+
 const Home = () => {
+  const { t } = useTranslation<"ru">();
   return (
     <section className="home" id="home">
       <img
@@ -15,15 +18,12 @@ const Home = () => {
         alt="mountains background"
       />
       <div className="home__animation-wrapper">
-        <h1 className="home__title">Dmitry Kulakov</h1>
+        <h1 className="home__title">
+          <Trans i18nKey="home.name">Dmitry Kulakov</Trans>
+        </h1>
         <TypeWriter
-          heading="I'm"
-          messages={[
-            "Web Developer",
-            "Front End Developer",
-            "Back End Developer?",
-            "Software Engineer",
-          ]}
+          heading={t("home.whoamiHeading")}
+          messages={t("home.whoami", { returnObjects: true })}
         />
         <Socials />
       </div>
