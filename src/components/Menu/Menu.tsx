@@ -3,6 +3,8 @@ import "./Menu.scss";
 
 import { Outlet } from "react-router-dom";
 import SectionButton from "./components/SectionButton";
+import { useTranslation } from "react-i18next";
+import ToggleSwitch from "./components/ToggleSwitch";
 
 type MenuProps = {
   activeSection: string;
@@ -10,10 +12,10 @@ type MenuProps = {
 
 const Menu = ({ activeSection }: MenuProps) => {
   const [isActiveMenu, setIsActiveMenu] = useState(false);
-
   const handleClick = () => {
     setIsActiveMenu(!isActiveMenu);
   };
+  const { t } = useTranslation();
   return (
     <>
       <Outlet />
@@ -31,46 +33,53 @@ const Menu = ({ activeSection }: MenuProps) => {
           <ul className="menu__list">
             <li className="menu__list-item">
               <SectionButton
-                title="home"
+                id="home"
+                title={t("menu.home")}
                 icon="home"
                 activeSection={activeSection}
               />
             </li>
             <li className="menu__list-item">
               <SectionButton
-                title="about"
+                id="about"
+                title={t("menu.about")}
                 icon="user"
                 activeSection={activeSection}
               />
             </li>
             <li className="menu__list-item">
               <SectionButton
-                title="facts"
+                id="facts"
+                title={t("menu.facts")}
                 icon="file"
                 activeSection={activeSection}
               />
             </li>
             <li className="menu__list-item">
               <SectionButton
-                title="skills"
+                id="skills"
+                title={t("menu.skills")}
                 icon="bag"
                 activeSection={activeSection}
               />
             </li>
             <li className="menu__list-item">
               <SectionButton
-                title="projects"
+                id="projects"
+                title={t("menu.projects")}
                 icon="server"
                 activeSection={activeSection}
               />
             </li>
             <li className="menu__list-item">
               <SectionButton
-                title="contact"
+                id="contact"
+                title={t("menu.contact")}
                 icon="envelope"
                 activeSection={activeSection}
               />
             </li>
+            <ToggleSwitch />
           </ul>
         </nav>
       </header>

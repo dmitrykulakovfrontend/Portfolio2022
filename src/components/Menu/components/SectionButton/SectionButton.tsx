@@ -1,11 +1,12 @@
 import useWindowSize from "hooks/useWindowSize";
-import React from "react";
+import React, { useState } from "react";
 import "../../Menu.scss";
 
 type SectionButtonProps = {
   title: string;
   activeSection: string;
   icon?: string;
+  id: string;
 };
 
 enum Variables {
@@ -17,19 +18,31 @@ enum Variables {
   "screenFull" = 1400,
 }
 
-const SectionButton = ({ title, activeSection, icon }: SectionButtonProps) => {
+const SectionButton = ({
+  title,
+  activeSection,
+  icon,
+  id,
+}: SectionButtonProps) => {
   const { width } = useWindowSize();
+
+  const isSmallScreen = width && width <= Variables.screenLg;
+
+  const isActive = activeSection === id;
+
+  const [isHover, changeIsHover] = useState(false);
+
+  const showTitle = isSmallScreen || isActive || isHover;
+  const showActive = isActive || isHover;
   return (
     <a
-      href={`#${title}`}
-      className={
-        activeSection === title ? "menu__link menu__link_active" : "menu__link"
-      }
+      href={`#${id}`}
+      className={showActive ? "menu__link menu__link_active" : "menu__link"}
+      onMouseEnter={() => changeIsHover(true)}
+      onMouseLeave={() => changeIsHover(false)}
     >
       <i className={`menu__icon uil uil-${icon}`}></i>
-      {(width && width <= Variables.screenLg) || activeSection === title
-        ? `${title[0].toUpperCase()}${title.slice(1)}`
-        : ""}
+      {showTitle ? title : ""}
     </a>
   );
 };

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Section from "../Section";
 import Skill from "./components/Skill";
 import "./Skills.scss";
+import { useTranslation } from "react-i18next";
 
 type SkillsProps = {
   activeSection: string;
@@ -37,11 +38,13 @@ const skills = [
 
 const Skills = ({ activeSection }: SkillsProps) => {
   const [isInView, setIsInView] = useState(false);
+  const { t } = useTranslation();
   return (
     <Section
       inverted
-      title="Skills"
-      info="My knowledges of languages, frameworks and libraries"
+      id="Skills"
+      title={t("skills.title")}
+      info={t("skills.subtitle")}
     >
       <motion.div
         onViewportEnter={() => {

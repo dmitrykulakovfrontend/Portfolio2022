@@ -1,4 +1,12 @@
 {
+  "menu": {
+    "home": "Главное",
+    "about": "Обо мне",
+    "facts": "Факты",
+    "skills": "Навыки",
+    "projects": "Проекты",
+    "contact": "Связь"
+  },
   "home": {
     "name": "Dmitry Kulakov",
     "whoamiHeading": "I`m",
@@ -8,5 +16,116 @@
       "Back End Developer?",
       "Software Engineer"
     ]
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "Here you can learn about me",
+    "welcome": "Dmitry.",
+    "developer": "Front End Developer.",
+    "info": "I am a Web Developer from Russia with a good experience in collaboration with developers and people.",
+    "profile": {
+      "hobbies": { "value": "Books, video-games", "name": "Hobbies" },
+      "goal": {
+        "value": "Develop products with great user experience",
+        "name": "Goal"
+      },
+      "city": { "value": "Moscow, Russia", "name": "City" },
+      "email": { "value": "atomeistee@gmail.com", "name": "Email" },
+      "technologies": {
+        "value": "Next.js, React, TypeScript, Tailwind",
+        "name": "Technologies"
+      },
+      "freelance": { "value": "Available", "name": "Freelance" }
+    },
+    "bulletPoints": [
+      "Self-taught front-end software engineer with great experience in Typescript and React.",
+      "Worked with: MongoDB, Express, React, Node.js, TanStack products, tRPC, Prisma, Typescript, and Next.",
+      "Collaborated with other web developers in eager to create a successfull web applications.",
+      "Have great experience with GitHub flow and git.",
+      "Looking for a remote job as frontend developer",
+      "Check out my portfolio page and projects, including Books Hut, Paladins Data, and Interview Play Book."
+    ],
+    "description": "I am a self-taught front-end developer based in Moscow, Russia. I have good experience in web development and have used many different technologies such as: MongoDB, Express, React, Node.js, TanStack products, tRPC, Prisma, Typescript, and Next. I have honed these skills through self-study, collaboration with other developers, and hands-on experience creating full-stack applications. I am proficient in using GitHub Flow to work efficiently with a team.",
+    "description_2": "In addition to my experience and skills, I have a portfolio of projects that showcases my capabilities as a front-end developer. These projects includes a website library with the ability to create an account and access a wide range of books, a web application that uses Hi-Rez Studios API to show user statistics from the game called Paladins, and a CRUD task-oriented application that stores data in LocalStorage.",
+    "description_3": "Thank you for considering me for your web development needs. I am eager to put my skills to use in a new role and contribute to the success of your team."
+  },
+  "facts": {
+    "title": "Facts",
+    "subtitle": "Here some facts that I achieved and proud of",
+    "achievements": [
+      {
+        "value": 4,
+        "title": "Finished Projects",
+        "icon": "wordpress-simple"
+      },
+      {
+        "value": 350,
+        "title": "Solved Coding Challenges",
+        "icon": "desktop"
+      },
+      {
+        "value": 750,
+        "title": "Contributions",
+        "icon": "globe"
+      },
+      {
+        "value": 1000,
+        "title": "Hours of Coding",
+        "icon": "keyboard"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "List of my main skills"
+  },
+  "projects": {
+    "title": "Projects",
+    "websiteButton": "Website",
+    "Todo Daily": {
+      "description": "To-do CRUD application with storing data in local storage.",
+      "bulletPoints": [
+        "Pure JavaScript for manipulations with DOM.",
+        "Ability to write tasks for a future week or change the previous week tasks"
+      ]
+    },
+    "Books Hut": {
+      "description": "Website library with the ability to create an account, and download/read/save books in your account.",
+      "bulletPoints": [
+        "Secured user authentication and stored book data by utilizing Redis and PostgreSQL.",
+        "Designed with Figma and styled with SCSS.",
+        "Lead front end by collaborating with a server-side team.",
+        "Implemented TypeScript for type data management."
+      ]
+    },
+    "Paladins Data": {
+      "description": "Web Application that uses Hi-Rez Studios API to show user statistics in the game 'Paladins'.",
+      "bulletPoints": [
+        "Used Apollo GraphQL and MongoDB to store and manage data",
+        "Styled with SCSS and the MUI library",
+        "Implemented a backend with Express and used an API wrapper to work with the API",
+        "Successfully finished this full-stack project in just one month, demonstrating the ability to learn and adapt quickly."
+      ]
+    },
+    "Interview PlayBook": {
+      "description": "Full-stack application to improve answers in interviews by completing quizzes!",
+      "bulletPoints": [
+        "Built with Next.js and TypeScript for server-rendered React apps with improved type safety",
+        "Used tRPC for efficient, type-safe communication between the client and server, with Prisma for data access and manipulation",
+        "Applied a modern design system with Tailwind CSS for styling and layout",
+        "Implemented NextAuth.js for secure, flexible user authentication with JWT (JSON Web Tokens)"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "location": "Location",
+    "locationValue": "Moscow, Russia",
+    "email": "Email",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email",
+    "subjectPlaceholder": "Subject",
+    "messagePlaceholder": "Message",
+    "sendMessage": "Send"
   }
 }

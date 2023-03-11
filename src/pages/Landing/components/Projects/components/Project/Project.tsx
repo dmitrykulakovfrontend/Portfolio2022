@@ -1,6 +1,7 @@
 import Button from "components/Button";
 import React from "react";
 import "./Project.scss";
+import { Trans } from "react-i18next";
 
 type ProjectProps = {
   name: string;
@@ -67,7 +68,9 @@ const Project = (props: ProjectProps) => {
             href={props.website}
             rel="noreferrer"
           >
-            <Button active>Website</Button>
+            <Button active>
+              <Trans i18nKey="projects.websiteButton">Website</Trans>
+            </Button>
           </a>
         </div>
       </div>

@@ -3,13 +3,20 @@ import React, { ReactNode } from "react";
 import "./Section.scss";
 
 type SectionProps = {
-  title: string;
+  id: string;
   info?: string;
   children?: ReactNode;
   inverted?: boolean;
+  title?: string;
 };
 
-const Section = ({ title, info, children, inverted }: SectionProps) => {
+const Section = ({
+  id,
+  info,
+  children,
+  inverted,
+  title = id,
+}: SectionProps) => {
   return (
     <motion.section
       transition={{ ease: "easeInOut", duration: 1 }}
@@ -17,7 +24,7 @@ const Section = ({ title, info, children, inverted }: SectionProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px 0px" }}
       className={inverted ? "page-section page-section_dark" : "page-section"}
-      id={title.toLowerCase().replace(" ", "-")}
+      id={id.toLowerCase().replace(" ", "-")}
     >
       <h2
         className={

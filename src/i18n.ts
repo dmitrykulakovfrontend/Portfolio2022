@@ -5,7 +5,6 @@ import en from "locales/en/translation.json";
 import ru from "locales/ru/translation.json";
 i18n
   // detect user language
-  // learn more: https://github.com/i18next/i18next-browser-languageDetector
   .use(LanguageDetector)
   // pass the i18n instance to react-i18next.
   .use(initReactI18next)
@@ -15,6 +14,9 @@ i18n
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
+    detection: {
+      order: ["localStorage", "navigator"],
+    },
     resources: {
       en: {
         translation: en,
@@ -23,7 +25,6 @@ i18n
         translation: ru,
       },
     },
-    // lng: "ru",
   });
 
 export default i18n;

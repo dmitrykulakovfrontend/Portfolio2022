@@ -9,7 +9,7 @@ import mountains from "static/mountains.webp";
 import { useTranslation, Trans } from "react-i18next";
 
 const Home = () => {
-  const { t } = useTranslation<"ru">();
+  const { t } = useTranslation();
   return (
     <section className="home" id="home">
       <img
