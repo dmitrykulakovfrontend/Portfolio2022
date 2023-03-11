@@ -1,11 +1,11 @@
 {
   "menu": {
-    "home": "Главное",
-    "about": "Обо мне",
-    "facts": "Факты",
-    "skills": "Навыки",
-    "projects": "Проекты",
-    "contact": "Связь"
+    "home": "Home",
+    "about": "About",
+    "facts": "Facts",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
   },
   "home": {
     "name": "Dmitry Kulakov",
